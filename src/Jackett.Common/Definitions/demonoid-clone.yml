@@ -51,7 +51,7 @@ search:
     title:
       selector: name
     download_link:
-      optional: yes
+      optional: true
       selector: file_path
     download:
       text: "{{ if .Result.download_link }}/{{ .Result.download_link }}{{ else }}{{ end }}"
@@ -63,7 +63,7 @@ search:
     details:
       text: "/{{ .Result.details_link }}"
     magnet:
-      optional: yes
+      optional: true
       selector: magnet_link
     date:
       selector: created_at
